@@ -41,6 +41,10 @@ public class Kaupunki {
         onkoKayty = true;
     }
     
+    public void setEiKaydyksi() {
+        onkoKayty = false;
+    }
+    
     /**
      *
      * @return tunnistenumero

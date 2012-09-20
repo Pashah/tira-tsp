@@ -3,15 +3,16 @@ package approksimaatio;
 import tietorakenteet.Kaupunki;
 
 /**
- * Etsii kauppamatkustajan ongelmaan lyhyimman polun kaytttamalla ahnetta
- * menetelmaa. Eli etenee aina lahimpaan solmuun, jossa ei ole viela kayty
+ * Etsii kauppamatkustajan ongelmaan lyhyimman polun käyttämällä ahnetta
+ * menetelmää. Eli etenee aina lahimpaan solmuun, jossa ei ole viela kayty
  *
  * @author Miika
  */
 public class AhneMenetelma {
 
-    private Kaupunki[] ratkaisu = new Kaupunki[4];
-    private Kaupunki[] kaupungit = new Kaupunki[4];
+    int solmujenLkm = 4;
+    private Kaupunki[] ratkaisu = new Kaupunki[solmujenLkm];
+    private Kaupunki[] kaupungit = new Kaupunki[solmujenLkm];
     private Kaupunki nykyinenKaupunki;
     
     /**
@@ -82,7 +83,6 @@ public class AhneMenetelma {
         double dy = nykyinenKaupunki.getY() - seurKaupunki.getY();
         double etaisyys = Math.sqrt(dx * dx + dy * dy);
         return etaisyys;
-
     }
 
     /**
